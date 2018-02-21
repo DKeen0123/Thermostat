@@ -72,5 +72,10 @@ describe('Thermostat', function() {
       thermostat.temperature = 23;
       expect(thermostat.energyUsage()).toEqual('medium-usage');
     });
+
+    it("returns 'high-usage' when temperature is above 25", function() {
+      thermostat.temperature = 26;
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
   });
 });
