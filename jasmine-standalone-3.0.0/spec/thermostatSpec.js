@@ -11,6 +11,13 @@ describe('Thermostat', function() {
     it('returns temperature which defaults to 20', function() {
       expect(thermostat.temperature).toBe(20);
     });
+
+    it('has a minimum temperature of 10', function() {
+      thermostat.temperature = 10;
+      expect(function() {
+        thermostat.down();
+      }).toThrow('You have reached the minimum temperature.');
+    });
   });
 
   describe('.up', function() {
