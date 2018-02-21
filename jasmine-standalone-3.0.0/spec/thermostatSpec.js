@@ -19,6 +19,12 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('.getCurrentTemperature', function() {
+    it('displays the current temperature', function() {
+      expect(thermostat.getCurrentTemperature()).toBe(20);
+    });
+  });
+
   describe('.up', function() {
     it('increases the temperature by 1', function() {
       thermostat.up();
