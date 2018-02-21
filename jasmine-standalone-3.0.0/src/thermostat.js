@@ -5,6 +5,10 @@ var Thermostat = function() {
   this.powerSavingMode = true;
 };
 
+Thermostat.prototype.getCurrentTemperature = function() {
+  return this.temperature;
+};
+
 Thermostat.prototype.up = function() {
   if (this.powerSavingMode === true && this.temperature === 25) {
     throw 'Power saving mode is on. Max temp is 25.';

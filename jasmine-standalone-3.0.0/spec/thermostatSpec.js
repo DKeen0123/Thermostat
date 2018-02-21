@@ -9,7 +9,7 @@ describe('Thermostat', function() {
 
   describe('.temperature', function() {
     it('returns temperature which defaults to 20', function() {
-      expect(thermostat.temperature).toBe(20);
+      expect(thermostat.getCurrentTemperature()).toBe(20);
     });
     it('has a minimum temperature of 10', function() {
       thermostat.temperature = 10;
@@ -28,14 +28,14 @@ describe('Thermostat', function() {
   describe('.up', function() {
     it('increases the temperature by 1', function() {
       thermostat.up();
-      expect(thermostat.temperature).toBe(21);
+      expect(thermostat.getCurrentTemperature()).toBe(21);
     });
   });
 
   describe('.down', function() {
     it('decreases the temperature by 1', function() {
       thermostat.down();
-      expect(thermostat.temperature).toBe(19);
+      expect(thermostat.getCurrentTemperature()).toBe(19);
     });
   });
 
@@ -64,7 +64,7 @@ describe('Thermostat', function() {
     it('resets temp to 20', function() {
       thermostat.temperature = 25;
       thermostat.reset();
-      expect(thermostat.temperature).toBe(20);
+      expect(thermostat.getCurrentTemperature()).toBe(20);
     });
   });
 
