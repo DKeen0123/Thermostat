@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thermostat</title>
+  </head>
+  <body>
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+  alert('welcome');
+});
+</script>
+
+    <article class="temperature">
+      <h1>Thermostat</h1>
+
+      <section id="current-temperature-container">
+        <h2>Current Temperature</h2>
+        <p id="current-temperature">20</p>
+      </section>
+
+      <section id="temperature-change-btns-container">
+        <button id="increase-temperature-btn" type="button">Up</button>
+        <button id="decrease-temperature-btn" type="button">Down</button>
+      </section>
+
+      <section id="power-saving-container">
+        <p id="psm-status">on</p>
+        <button id="psm-switch" type="button">turn off</button>
+      </section>
+
+      <section id="energy-usage-container">
+        <p id="current-energy-usage">medium-usage</p>
+      </section>
+    </article>
+
+    <script src="jasmine-standalone-3.0.0/src/thermostat.js"></script>
+
+  </body>
+</html>
