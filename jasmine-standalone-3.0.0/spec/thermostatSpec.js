@@ -47,10 +47,18 @@ describe('Thermostat', function() {
     });
     it('has a max temp of 32 when off', function() {
       thermostat.powerSavingModeSwitch();
-      thermostat.temperature = 32
+      thermostat.temperature = 32;
       expect(function() {
         thermostat.up();
       }).toThrow('Max temp is 32');
+    });
+  });
+
+  describe('.reset', function() {
+    it('resets temp to 20', function() {
+      thermostat.temperature = 25;
+      thermostat.reset();
+      expect(thermostat.temperature).toBe(20);
     });
   });
 });

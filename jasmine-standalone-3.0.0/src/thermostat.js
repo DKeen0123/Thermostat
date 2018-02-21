@@ -7,9 +7,11 @@ var Thermostat = function() {
 
 Thermostat.prototype.up = function() {
   if (this.powerSavingMode === true && this.temperature === 25) {
-    throw 'Power saving mode is on. Max temp is 25.'
+    throw 'Power saving mode is on. Max temp is 25.';
+  } else if (this.temperature === 32) {
+    throw 'Max temp is 32';
   } else {
-    this.temperature +=1;
+    this.temperature += 1;
   }
 };
 
