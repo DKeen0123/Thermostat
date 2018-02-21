@@ -11,7 +11,6 @@ describe('Thermostat', function() {
     it('returns temperature which defaults to 20', function() {
       expect(thermostat.temperature).toBe(20);
     });
-
     it('has a minimum temperature of 10', function() {
       thermostat.temperature = 10;
       expect(function() {
@@ -31,6 +30,12 @@ describe('Thermostat', function() {
     it('decreases the temperature by 1', function() {
       thermostat.down();
       expect(thermostat.temperature).toBe(19);
+    });
+  });
+
+  describe('.powerSavingMode', function() {
+    it('can be switched on', function() {
+      expect(thermostat.powerSavingMode.switch).toEqual('On');
     });
   });
 });
