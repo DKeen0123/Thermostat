@@ -1,0 +1,29 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.temperature {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: solid black 10px;
+  background-color: grey;
+}
+
+.low-usage {
+  color: blue;
+}
+
+.medium-usage {
+  color: yellow;
+}
+
+.high-usage {
+  color: red;
+}
+
+.w3-button {
+  margin: 15px;
+}

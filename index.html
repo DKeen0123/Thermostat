@@ -3,36 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
+    <link rel="stylesheet" type="text/css" href="interface.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.3/dist/roundslider.min.css" rel="stylesheet" />
   </head>
   <body>
     <script src="jquery-3.3.1.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-  alert('welcome');
-});
-</script>
+    <script src="interface.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.3/dist/roundslider.min.js"></script>
 
     <article class="temperature">
       <h1>Thermostat</h1>
 
       <section id="current-temperature-container">
-        <h2>Current Temperature</h2>
-        <p id="current-temperature">20</p>
+        <h4>Current Temperature</h4>
+        <p id="current-temperature"></p>
       </section>
 
       <section id="temperature-change-btns-container">
-        <button id="increase-temperature-btn" type="button">Up</button>
-        <button id="decrease-temperature-btn" type="button">Down</button>
+        <button class="w3-circle w3-red w3-large w3-padding-large w3-hover-grey" id="increase-temperature-btn" type="button">+</button>
+        <button class="w3-circle w3-aqua w3-hover-grey w3-large w3-padding-large" id="decrease-temperature-btn" type="button">-</button>
+      </section>
+
+      <section id="reset-container">
+        <button class="w3-button w3-black w3-round-large" id="reset-btn" type="button">Reset</button>
       </section>
 
       <section id="power-saving-container">
-        <p id="psm-status">on</p>
-        <button id="psm-switch" type="button">turn off</button>
+        <h4>Power Saving Mode:</h4>
+        <h5 id="psm-status"><strong>ON</strong></h5>
+        <button class="w3-button w3-round-large w3-black" id="psm-switch" type="button">turn off</button>
       </section>
 
       <section id="energy-usage-container">
-        <p id="current-energy-usage">medium-usage</p>
+        <h4>Power Usage</h4>
+        <p id="current-energy-usage"></p>
       </section>
     </article>
 
